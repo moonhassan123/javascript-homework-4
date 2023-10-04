@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event handler</title>
+</head>
+<body>
+    <button onclick="makeBlue()">blue</button>
+    <button id="pink">pink</button>
+    <button id="black">black</button>
+    <button id="orange">orange</button>
+    <button id="red">red</button>
+    <button id="RepetButton">click Hear Repet</button>
+    <section id="Conntainer3">
+
+    </section>
+    
+    
+    
+
+
+
+    <script>
+        function makeBlue(){
+           document.body.style.backgroundColor = 'blue'
+        }
+
+        // by id
+
+        const pinkdutton = document.getElementById('pink')
+        pinkdutton.onclick = function(makeBlue){
+            document.body.style.backgroundColor = 'pink'
+        }
+        const blackButton = document.getElementById('black')
+        blackButton.onclick = makeBlack
+
+        function makeBlack(){
+           document.body.style.backgroundColor = 'black'
+        }
+
+
+
+        // final stage
+        document.getElementById('orange').addEventListener('click',
+        function makeOrange(){
+            document.body.style.backgroundColor = 'orange'
+        })
+
+
+
+        document.getElementById('red').addEventListener('click',
+        function(){
+            document.body.style.backgroundColor = 'red'
+        })
+
+// make some news
+
+        document.getElementById('RepetButton').addEventListener('click',
+        function(){
+            const sectionConntainer2 = document.getElementById('Conntainer3')
+  
+             const ul = document.createElement('ul')
+              ul.innerHTML = `
+                  <li>bureBad</li>
+                   <li>tidtaBad</li>
+                  <li>tista</li>
+
+        `
+                sectionConntainer2.appendChild(ul)
+
+              })
+
+
+
+    </script>
+</body>
+</html>
